@@ -1,0 +1,25 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+
+		{
+			"name": "Download and Run",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/main.py",
+			"interactiveTerminal": false,
+			"address": "ev3dev.local"
+		},
+		{
+			"name": "Download and Run Square",
+			"type": "ev3devBrowser",
+			"request": "launch",
+			"program": "/home/robot/${workspaceRootFolderName}/square_movement.py",
+			"interactiveTerminal": false,
+			"address": "ev3dev.local"
+		}
+	]
+}
