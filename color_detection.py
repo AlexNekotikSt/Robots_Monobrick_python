@@ -1,17 +1,12 @@
-#!/usr/bin/env pybricks-micropython
-
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import ColorSensor
 from pybricks.parameters import Port, Color
 from pybricks.tools import wait
 
-# Create your objects here.
 ev3 = EV3Brick()
 
-# Define color sensor
 color_sensor = ColorSensor(Port.S3)
 
-# Continuously detect and announce colors
 while True:
     detected_color = color_sensor.color()
     
@@ -30,4 +25,4 @@ while True:
     else:
         ev3.speaker.say("Unknown color")
     
-    wait(1000)  # Wait 1 second before next detection
+    wait(1000)

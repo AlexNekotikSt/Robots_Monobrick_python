@@ -5,27 +5,20 @@ from pybricks.robotics import DriveBase
 from pybricks.ev3devices import Motor
 from pybricks.tools import wait
 
-# Create your objects here.
 ev3 = EV3Brick()
 
-# Define motors
 left_motor = Motor(Port.B)
 right_motor = Motor(Port.C)
 
-# Define color sensor
 color_sensor = ColorSensor(Port.S3)
 
-# Wheel diameter in mm (standard LEGO wheel)
 wheel_diameter = 56
 
-# Create DriveBase
 drive_base = DriveBase(left_motor, right_motor, wheel_diameter=wheel_diameter, axle_track=114)
 
-# Initialize previous color
 previous_color = None
 
-# Move straight and announce colors until black is detected
-drive_base.drive(100, 0)  # Slow speed for detection
+drive_base.drive(100, 0)
 
 while True:
     detected_color = color_sensor.color()
@@ -50,4 +43,4 @@ while True:
         
         previous_color = detected_color
     
-    wait(100)  # Small delay for stability
+    wait(100)
